@@ -1,21 +1,23 @@
 <template>
   <div class="app-container">
-    <div style="margin: 60px 0;">
-      充值列表
+    <div style="margin-top: 60px;">
+      本月充值/消费
+    </div>
+    <div style="display: flex;">
+      <p>当月充值总金额 10000</p>
+      <p style="margin-left: 80px;">当月充值笔数 1000</p>
     </div>
     <div class="footer">
       <el-table
           :data="list"
           style="width: 100%" :border="true" v-loading="loading">
-        <el-table-column prop="id" width="60" label="id" align="center"/>
-        <el-table-column prop="name" label="用户名" align="center">
+        <el-table-column prop="time" label="日期" align="center"/>
+        <el-table-column prop="rechargeUserNum" label="充值用户数" align="center">
         </el-table-column>
-        <el-table-column prop="shop" label="商品名" align="center"/>
+        <el-table-column prop="rechargeNum" label="充值笔数" align="center"/>
         <el-table-column prop="rechargeAmount" label="充值金额" align="center">
         </el-table-column>
-        <el-table-column prop="amount" label="金币数额" align="center"/>
-        <el-table-column prop="creatTime" label="创建时间"  min-width="120px" align="center"/>
-       
+        <el-table-column prop="consumptionNum" label="消费金币数" align="center"/>
       </el-table>
       <div style="width: 100%; display: flex; justify-content: center; padding-top: 20px">
         <el-pagination
@@ -43,13 +45,13 @@ export default {
           username: ''
       },
       list: [{
-          name: '王五',
-          rechargeAmount: 1,
-          amount:1,
+          rechargeUserNum: '5',
+          rechargeNum: 1,
+          consumptionNum:1,
           img: 'https://img1.baidu.com/it/u=300787145,1214060415&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500',
           shop: '王五',
-          creatTime: 0,
-          id: 1
+          time: 20231111,
+          rechargeAmount: 1
 
       }]
    }

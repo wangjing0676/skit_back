@@ -22,6 +22,16 @@ const router = createRouter({
       meta: { title: '充值管理', icon: 'House' },
     },
     {
+      path: '/rechargeWeekList',
+      component: () => import('@/views/recharge/weekList.vue'),
+      meta: { title: '充值管理', icon: 'House' },
+    },
+    {
+      path: '/rechargeMonthList',
+      component: () => import('@/views/recharge/monthList.vue'),
+      meta: { title: '充值管理', icon: 'House' },
+    },
+    {
       path: '/404',
       name: '404',
       component: () => import(/* webpackChunkName: "404" */ '@/views/404.vue'),

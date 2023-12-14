@@ -63,7 +63,7 @@ service.interceptors.response.use(
       message: error.message,
       duration: 1.5 * 1000
     })
-    router.push('/login')
+    // router.push('/login')
     return Promise.reject(error)
   }
 )
